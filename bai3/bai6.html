@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label > 30 số đầu chia hết cho 7:</label><div id="in"></div>
+<label > Tổng 30 số:</label><div id="kq"></div>
+<script>
+    let count = 0;
+    let n = 0;
+    let tong = 0;
+
+    while(count<30){
+        if(n%7!=0){
+            n++
+        }else{
+            document.getElementById("in").innerText +=n + " ; ";
+            tong +=n;
+            n++;
+            count ++;
+        }
+    }
+    document.getElementById("kq").innerText = tong;
+</script>
+</body>
+</html>

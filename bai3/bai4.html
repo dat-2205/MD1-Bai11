@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let t1 = 0;
+  let t2 = 1;
+  let count=false;
+  while (count==false) {
+    let t3 = t1 + t2;
+    t1 = t2;
+    t2 = t3;
+    if (t1%5==0){
+      count = true;
+      alert(t1)
+    }
+  }
+</script>
+</body>
+</html>

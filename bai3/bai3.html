@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="in"></div>
+<script>
+  let t1 = 0;
+  let t2 = 1;
+  let count=0;
+  while (count<20){
+    let t3 = t1 + t2;
+    t1 = t2;
+    t2 = t3;
+    document.getElementById("in").innerText +=  t1 + " ;";
+    count ++;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="in"></div>
+<script>
+    for (i=1;i<101; i++){
+        if(i%3==0 && i%5==0){
+            document.getElementById("in").innerHTML += "FizzBuzz"  + " ;";
+        }else if (i%5==0){
+            document.getElementById("in").innerHTML += "Buzz"  + " ;";
+        }else if (i%3==0){
+            document.getElementById("in").innerHTML += "Fizz"  + " ;";
+        }else {
+            document.getElementById("in").innerHTML += i + " ;";
+        }
+
+    }
+</script>
+</body>
+</html>

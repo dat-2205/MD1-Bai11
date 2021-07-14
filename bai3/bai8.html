@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play()">Play now!</button>
+<script>
+  function play(){
+    checked()
+  }
+
+  function checked() {
+    let a = parseInt(prompt("Nhập khoảng bạn muốn chơi từ:"));
+    let a2 = parseInt(prompt("Nhập khoảng bạn muốn chơi đến:"));
+
+
+    if(a2<a){
+      alert("Bạn phải nhập số nhỏ hơn trước");
+    }else{
+      let b = Math.floor(Math.random()*(a2-a) + a );
+      console.log(b)
+      let c = parseInt(prompt("Hãy đoán xem: "));
+      let check = false;
+      let count = 0;
+
+
+      while (!check && count < 3) {
+        if(a>c && c>a2){
+          c = parseInt("Bạn phải nhập trong khoảng đã chọn")
+        } else if (b == c) {
+          alert("Bạn đã đoán đúng!!!  " + b);
+          check = true;
+        } else if (b != c) {
+              let d ;
+              if(b<c){
+                d =  prompt("Sai rồi nhỏ hơn. Thử lại nhé??? 1=có : 2=không");
+              }else{
+                d =  prompt("Sai rồi lớn hơn. Thử lại nhé??? 1=có : 2=không");
+              }
+              switch (d) {
+                case '1':
+                  c = parseInt(prompt("Đoán lại : "));
+                  check = false;
+                  count++;
+                  break;
+                case '2':
+                  alert("Game over!");
+                  check = true;
+                  break;
+                default:
+                  alert("Game over!");
+                  check = true;
+              }
+
+          }
+
+        if (count == 3) {
+          alert("Không đúng. Bạn đã hết lượt chơi!!")
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>
