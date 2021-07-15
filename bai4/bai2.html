@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num">
+<button onclick="math()">Tính</button>
+<div id="in"></div>
+<script>
+  function math() {
+    let giaithua = 1;
+    let num = parseInt(document.getElementById("num").value);
+    for(i=1;i<=num;i++){
+      giaithua *=i;
+      document.getElementById("in").innerText = giaithua;
+    }
+
+  }
+</script>
+</body>
+</html>

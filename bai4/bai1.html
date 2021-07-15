@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num"> <button onclick="getNum()">Run</button>
+<div id="in"></div>
+<script>
+  function getNum(){
+    document.getElementById("in").innerHTML =  "";
+    fibonanci()
+  }
+  function fibonanci() {
+    let t1 = 0;
+    let t2 = 1;
+    let count=0;
+    let num = parseInt(document.getElementById("num").value);
+    while (count<num){
+      let t3 = t1 + t2;
+      t1 = t2;
+      t2 = t3;
+      document.getElementById("in").innerHTML +=  t1 + " ;";
+      count ++;
+    }
+  }
+
+</script>
+</body>
+</html>

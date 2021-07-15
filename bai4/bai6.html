@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="display: inline-flex">
+    <div id="head" ></div>
+<!--    <label style='padding: 5px'></label>-->
+<!--    <label style='padding: 5px'></label>-->
+    <div id="head2" ></div>
+</div>
+<div id="bot"></div>
+
+<script>
+// Phần đầu
+
+    for(i=1;i<=4;i++){
+        for(k=4;k>=i;k--){
+            document.getElementById("head").innerHTML += ("<label style='padding: 5px'>"+ "_" + "</label>")
+        }
+        for (j=1;j<=((i*2)-1);j++){
+            document.getElementById("head").innerHTML +=("<label style='padding: 5px'>"+'*'+"</label>")
+        }
+        for(k=5;k>=i;k--){
+            document.getElementById("head").innerHTML +=("<label style='padding: 5px'>"+ "_" + "</label>")
+        }
+        document.getElementById("head").innerHTML+=("<br>")
+
+    }
+    for(i=1;i<=4;i++){
+        for(k=4;k>=i;k--){
+            document.getElementById("head2").innerHTML += ("<label style='padding: 5px'>"+ "_" + "</label>")
+        }
+        for (j=1;j<=((i*2)-1);j++){
+            document.getElementById("head2").innerHTML +=("<label style='padding: 5px'>"+'*'+"</label>")
+        }
+        for(k=4;k>=i;k--){
+            document.getElementById("head2").innerHTML +=("<label style='padding: 5px'>"+ "_" + "</label>")
+        }
+        document.getElementById("head2").innerHTML+=("<br>")
+
+    }
+ // Phần dưới.
+  for (i=1;i<=10;i++){
+      for (k=2;k<=i;k++){
+          document.getElementById("bot").innerHTML +=("<label style='padding: 5px'>"+ "_" + "</label>")
+      }
+    for(j=19;j>=((i*2)-1);j--){
+        document.getElementById("bot").innerHTML +=("<label style='padding: 5px'>"+'*'+"</label>")
+    }
+      for (k=2;k<=i;k++){
+          document.getElementById("bot").innerHTML +=("<label style='padding: 5px'>"+ "_" + "</label>")
+      }
+      document.getElementById("bot").innerHTML +=("<br>")
+
+  }
+</script>
+</body>
+</html>

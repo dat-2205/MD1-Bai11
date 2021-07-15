@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Số tiền vay  :<input type="number" id="von"> <br>
+Tiền lãi mỗi tháng  :<input type="number" id="lai"> <br>
+Số tháng  :<input type="number" id="thang"> <br>
+<button onclick="math()">Tính</button>
+<div id="in"></div>
+<script>
+  function math() {
+    let von = parseInt(document.getElementById("von").value);
+    let lai = parseInt(document.getElementById("lai").value);
+    let thang = parseInt(document.getElementById("thang").value);
+
+    let kq = von*((1+(lai/100))**thang)
+    document.getElementById("in").innerText ="Số tiền phải trả:  "+ kq.toFixed(2) + "  VND";
+  }
+</script>
+</body>
+</html>
